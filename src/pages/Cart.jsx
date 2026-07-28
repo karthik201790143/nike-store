@@ -60,12 +60,11 @@ const Cart = () => {
                 </div>
 
                 <button
-                  onClick={() =>
-                    removeFromCart(item.id, item.size)
-                  }
-                >
-                  Remove
-                </button>
+  className="remove-btn"
+  onClick={() => removeFromCart(item.id, item.size)}
+>
+  Remove
+</button>
               </div>
             </div>
           ))}

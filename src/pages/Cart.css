@@ -132,5 +132,32 @@
 .cart-summary{
     text-align:center;
 }
+}
+.remove-btn {
+  background: linear-gradient(135deg, #ff3b30, #d90429);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 59, 48, 0.35);
+}
 
+.remove-btn:hover {
+  background: linear-gradient(135deg, #d90429, #b00020);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 59, 48, 0.45);
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
+
+.remove-btn::before {
+  content: "🗑 ";
+  font-size: 15px;
 }
