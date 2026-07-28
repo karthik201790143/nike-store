@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/*======================
+    GALLERY SECTION
+=======================*/
+
+.gallery{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:90px 8%;
+
+    background:linear-gradient(135deg,#050505,#101010,#181818);
+
+    overflow:hidden;
+
+}
+
+.gallery h1{
+
+    text-align:center;
+
+    font-size:55px;
+
+    color:white;
+
+    font-weight:800;
+
+    margin-bottom:60px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.gallery h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:5px;
+
+    background:#ff4d00;
+
+    margin:15px auto;
+
+    border-radius:20px;
+
+}
+
+/*======================
+      SLIDER
+=======================*/
+
+.slider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:35px;
+
+}
+
+/*======================
+      SLIDE
+=======================*/
+
+.slide{
+
+    display:flex;
+
+    gap:30px;
+
+    animation:fade .8s ease;
+
+}
+
+/*======================
+      IMAGES
+=======================*/
+
+.slide img{
+
+    width:360px;
+
+    height:270px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    border:3px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.slide img:hover{
+
+    transform:translateY(-15px) scale(1.05);
+
+    box-shadow:
+    0 0 25px #ff4d00,
+    0 0 50px rgba(255,77,0,.4);
+
+    border-color:#ff4d00;
+
+}
+
+/*======================
+      BUTTONS
+=======================*/
+
+.btn{
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#ff4d00,#ff7a00);
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(255,77,0,.45);
+
+}
+
+.btn:hover{
+
+    transform:scale(1.15);
+
+    background:white;
+
+    color:#ff4d00;
+
+}
+
+/*======================
+   FLOAT ANIMATION
+=======================*/
+
+.slide img:nth-child(1){
+
+    animation:float1 5s ease-in-out infinite;
+
+}
+
+.slide img:nth-child(2){
+
+    animation:float2 6s ease-in-out infinite;
+
+}
+
+.slide img:nth-child(3){
+
+    animation:float1 7s ease-in-out infinite;
+
+}
+
+@keyframes float1{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@keyframes float2{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/*======================
+      FADE EFFECT
+=======================*/
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateX(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+/*======================
+    RESPONSIVE
+=======================*/
+
+@media(max-width:1200px){
+
+.slide img{
+
+width:300px;
+height:230px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.slider{
+
+flex-direction:column;
+
+}
+
+.slide{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.slide img{
+
+width:280px;
+height:220px;
+
+}
+
+.btn{
+
+width:55px;
+height:55px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.gallery{
+
+padding:70px 20px;
+
+}
+
+.gallery h1{
+
+font-size:40px;
+
+}
+
+.slide{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.slide img{
+
+width:95%;
+height:250px;
+
+}
+
+}

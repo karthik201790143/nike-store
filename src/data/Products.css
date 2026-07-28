@@ -1,0 +1,155 @@
+/* Products Section */
+.products {
+    padding: 80px 8%;
+    background: #f5f5f5;
+}
+
+.products h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.products h1::after {
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: #ff4d00;
+    display: block;
+    margin: 12px auto;
+    border-radius: 20px;
+}
+
+/* Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+}
+
+/* Glow Circle */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 77, 0, 0.08);
+    border-radius: 50%;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+    border-color: #ff4d00;
+}
+
+.card:hover::before {
+    transform: translateX(-50%) scale(1.25);
+}
+
+/* Shoe Image */
+.card img {
+    position: relative;
+    z-index: 2;
+    width: 290px;
+    height: 220px;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* Shoe Name */
+.card h3 {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #111;
+}
+
+/* Price */
+.card p {
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff4d00;
+    margin: 15px 0;
+}
+
+/* Button */
+.card button {
+    position: relative;
+    z-index: 2;
+    padding: 14px 35px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card button:hover {
+    background: #ff4d00;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card img {
+        width: 240px;
+        height: 190px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products {
+        padding: 50px 20px;
+    }
+
+    .products h1 {
+        font-size: 36px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        width: 220px;
+        height: 170px;
+    }
+}

@@ -1,0 +1,171 @@
+/* Product Details Section */
+.details {
+    min-height: 100vh;
+    padding: 80px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    background: #f5f5f5;
+    flex-wrap: wrap;
+}
+
+/* Product Image Card */
+.details-image {
+    flex: 1;
+    max-width: 500px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.details-image img {
+    width: 100%;
+    max-width: 420px;
+    transition: .4s ease;
+}
+
+.details-image:hover img {
+    transform: scale(1.08) rotate(-8deg);
+}
+
+/* Product Information */
+.details-info {
+    flex: 1;
+    max-width: 550px;
+}
+
+.details-info h1 {
+    font-size: 42px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.details-info h2 {
+    color: #ff4d00;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.details-info p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.details-info h3 {
+    margin: 25px 0 15px;
+    color: #111;
+    font-size: 20px;
+}
+
+/* Size Buttons */
+.sizes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.sizes button {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ddd;
+    background: #fff;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sizes button:hover {
+    border-color: #ff4d00;
+    color: #ff4d00;
+    transform: translateY(-4px);
+}
+
+.active-size {
+    background: #111 !important;
+    color: white !important;
+    border-color: #111 !important;
+}
+
+/* Add To Cart Button */
+.cart-btn {
+    width: 100%;
+    padding: 18px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cart-btn:hover {
+    background: #ff4d00;
+    transform: translateY(-3px);
+}
+
+/* Extra Information */
+.product-features {
+    margin-top: 35px;
+    display: grid;
+    gap: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,.08);
+}
+
+.feature span {
+    font-size: 26px;
+}
+
+.feature p {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .details {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .details-image {
+        width: 100%;
+    }
+
+    .details-info {
+        width: 100%;
+    }
+
+    .details-info h1 {
+        font-size: 32px;
+    }
+
+    .details-info h2 {
+        font-size: 28px;
+    }
+
+    .sizes {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,284 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* Background */
+
+.profile{
+    min-height:100vh;
+    background:linear-gradient(135deg,#f5f7fa,#eef2f7);
+    padding:50px;
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:35px;
+}
+
+/* ===========================
+        PROFILE CARD
+=========================== */
+
+.profile-card{
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.4s;
+    height:fit-content;
+}
+
+.profile-card:hover{
+    transform:translateY(-8px);
+}
+
+.profile-card img{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #ff4d00;
+    margin-bottom:20px;
+    box-shadow:0 15px 35px rgba(255,77,0,.25);
+}
+
+.profile-card h2{
+    font-size:32px;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.profile-card p{
+    font-size:17px;
+    color:#666;
+    margin:10px 0;
+}
+
+/* ===========================
+        STATS
+=========================== */
+
+.profile-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.stat{
+    background:#f8f8f8;
+    padding:18px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.stat:hover{
+    background:#ff4d00;
+    color:white;
+    transform:scale(1.05);
+}
+
+.stat h3{
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.stat span{
+    font-size:14px;
+}
+
+/* ===========================
+      TOTAL SPENT
+=========================== */
+
+.total-spent{
+    margin-top:35px;
+    background:linear-gradient(135deg,#ff4d00,#ff6b35);
+    color:white;
+    padding:25px;
+    border-radius:20px;
+}
+
+.total-spent h3{
+    font-size:18px;
+}
+
+.total-spent h2{
+    font-size:34px;
+    margin-top:10px;
+}
+
+/* ===========================
+      RECENT ORDERS
+=========================== */
+
+.recent-orders{
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.recent-orders h2{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#111;
+    position:relative;
+}
+
+.recent-orders h2::after{
+    content:"";
+    width:80px;
+    height:5px;
+    background:#ff4d00;
+    display:block;
+    margin-top:8px;
+    border-radius:20px;
+}
+
+/* ===========================
+        ORDER CARD
+=========================== */
+
+.recent-card{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:22px;
+    border-radius:20px;
+    background:#fafafa;
+    margin-bottom:20px;
+    border:1px solid #eee;
+    transition:.35s;
+}
+
+.recent-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.recent-card img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    background:white;
+    border-radius:18px;
+    padding:10px;
+}
+
+.order-details{
+    flex:1;
+}
+
+.order-details h3{
+    font-size:28px;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.order-details p{
+    color:#666;
+    font-size:17px;
+    margin:6px 0;
+}
+
+.order-price{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff4d00;
+    margin-top:12px;
+}
+
+/* ===========================
+      STATUS
+=========================== */
+
+.order-status{
+    background:#18b84f;
+    color:white;
+    padding:12px 30px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:16px;
+}
+
+/* ===========================
+      EMPTY
+=========================== */
+
+.empty-orders{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:250px;
+    color:#888;
+    font-size:24px;
+}
+
+/* ===========================
+      RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.profile{
+    grid-template-columns:1fr;
+}
+
+.profile-card{
+    width:100%;
+}
+
+}
+
+@media(max-width:768px){
+
+.profile{
+    padding:20px;
+}
+
+.profile-card img{
+    width:140px;
+    height:140px;
+}
+
+.profile-card h2{
+    font-size:26px;
+}
+
+.profile-stats{
+    grid-template-columns:1fr;
+}
+
+.recent-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.recent-card img{
+    width:100px;
+    height:100px;
+}
+
+.order-details h3{
+    font-size:24px;
+}
+
+.recent-orders h2{
+    font-size:28px;
+}
+
+.order-price{
+    font-size:24px;
+}
+
+.order-status{
+    margin-top:15px;
+}
+
+}

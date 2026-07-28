@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/*========================*/
+
+.newsletter{
+
+    width:100%;
+    padding:90px 8%;
+
+    background:linear-gradient(135deg,#050505,#121212);
+
+}
+
+/*========================*/
+
+.newsletter-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/*========================*/
+
+.newsletter-left{
+
+    flex:1;
+
+}
+
+.newsletter-left h1{
+
+    color:white;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.newsletter-left span{
+
+    color:#ff4d00;
+
+}
+
+.newsletter-left p{
+
+    color:#d6d6d6;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/*========================*/
+
+.newsletter-right{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.newsletter-right input{
+
+    flex:1;
+
+    padding:18px 25px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    outline:none;
+
+    background:white;
+
+}
+
+.newsletter-right input:focus{
+
+    box-shadow:0 0 20px rgba(255,77,0,.5);
+
+}
+
+.newsletter-right button{
+
+    padding:18px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#ff4d00,#ff8800);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.newsletter-right button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 30px rgba(255,77,0,.5);
+
+}
+
+/*========================*/
+
+@media(max-width:900px){
+
+.newsletter-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px 25px;
+
+}
+
+.newsletter-right{
+
+    width:100%;
+
+    flex-direction:column;
+
+}
+
+.newsletter-right input{
+
+    width:100%;
+
+}
+
+.newsletter-right button{
+
+    width:100%;
+
+}
+
+.newsletter-left h1{
+
+    font-size:36px;
+
+}
+
+}

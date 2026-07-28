@@ -1,0 +1,143 @@
+.athletes{
+    padding:80px 8%;
+    background:#111;
+    text-align:center;
+}
+
+.athletes h1{
+    color:#fff;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.athletes p{
+    color:#ccc;
+    margin-bottom:50px;
+}
+
+/* 3 Cards in One Row */
+
+.athlete-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* Card */
+
+.athlete-card{
+    background:#1a1a1a;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.athlete-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(255,77,0,.5);
+}
+
+.athlete-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.athlete-card:hover img{
+    transform:scale(1.08);
+}
+
+.athlete-content{
+    padding:20px;
+}
+
+.athlete-content h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+.athlete-content h4{
+    color:#ff4d00;
+    margin-bottom:15px;
+}
+
+.athlete-content p{
+    color:#ddd;
+    line-height:1.6;
+}
+
+.athlete-btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d00;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.athlete-btn:hover{
+    background:white;
+    color:#ff4d00;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.athlete-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.athlete-grid{
+    grid-template-columns:1fr;
+}
+
+}
+.athlete-grid{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.athlete-card{
+    width: 320px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+}
+
+.athlete-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255,77,0,0.5);
+}
+
+.athlete-card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.athlete-card h3{
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.athlete-card p{
+    color: #ccc;
+    margin-top: 8px;
+}
